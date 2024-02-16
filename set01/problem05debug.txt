@@ -1,0 +1,70 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\HP ELITEBOOK\c.activity\set01\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40146e: file problem04.c, line 9.
+(gdb) r
+Starting program: C:\Users\HP ELITEBOOK\c.activity\set01/./a.exe
+[New Thread 10384.0x4858]
+[New Thread 10384.0x43c0]
+
+Breakpoint 1, main () at problem04.c:9
+9           a=input();
+(gdb) s
+input () at problem04.c:17
+17          printf("enter two numbers");
+(gdb) 4 3
+Undefined command: "4".  Try "help".
+(gdb) s
+enter two numbers18         scanf("%d",&x);
+(gdb) 4 5
+Undefined command: "4".  Try "help".
+(gdb) s
+s
+19          return x;
+(gdb) s
+20      }
+(gdb) s
+main () at problem04.c:10
+10          b=input();
+(gdb) s
+input () at problem04.c:17
+17          printf("enter two numbers");
+(gdb)
+enter two numbers18         scanf("%d",&x);
+(gdb) s
+19          return x;
+(gdb) s
+20      }
+(gdb) s
+main () at problem04.c:11
+11          add(a,b,&sum);
+(gdb) s
+add (a=6422476, b=6422476, sum=0x61ff14) at problem04.c:23
+23          *sum=a+b;
+(gdb) s
+24      }
+(gdb) s
+main () at problem04.c:12
+12          output(a,b,sum);
+(gdb) s
+output (a=6422476, b=6422476, sum=12844952) at problem04.c:27
+27          printf("the sum of %d+%d is %d\n",a,b,sum);
+(gdb) s
+the sum of 6422476+6422476 is 12844952
+28      }
+(gdb) s
+main () at problem04.c:13
+13      }
+(gdb) ss
+Undefined command: "ss".  Try "help".
+(gdb) s
+0x00401288 in __register_frame_info ()
+(gdb)  
