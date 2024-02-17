@@ -1,0 +1,136 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\HP ELITEBOOK\c.activity\set01\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401526: file problem12.c, line 33.
+(gdb) r
+Starting program: C:\Users\HP ELITEBOOK\c.activity\set01/./a.exe
+[New Thread 8876.0x2aec]
+[New Thread 8876.0x3888]
+
+Breakpoint 1, main () at problem12.c:33
+33          printf("Enter the real part of the first complex number:\n ");
+(gdb) s
+Enter the real part of the first complex number:
+ 34         num1.real = input_complex().real;
+(gdb) s
+input_complex () at problem12.c:12
+12          scanf("%f %f", &num.real, &num.imaginary);
+(gdb) s
+s
+13          return num;
+(gdb) s
+14      }
+(gdb) s
+main () at problem12.c:35
+35          printf("Enter the imaginary part of the first complex number:\n ");
+(gdb) s
+Enter the imaginary part of the first complex number:
+ 36         num1.imaginary = input_complex().imaginary;
+(gdb) s
+input_complex () at problem12.c:12
+12          scanf("%f %f", &num.real, &num.imaginary);
+(gdb) s
+13          return num;
+(gdb) s
+14      }
+(gdb) s
+main () at problem12.c:38
+38          printf("Enter the real part of the second complex number:\n ");
+(gdb) s
+Enter the real part of the second complex number:
+ 39         num2.real = input_complex().real;
+(gdb) s
+input_complex () at problem12.c:12
+12          scanf("%f %f", &num.real, &num.imaginary);
+(gdb) s
+13          return num;
+(gdb) s
+14      }
+(gdb) s
+main () at problem12.c:40
+40          printf("Enter the imaginary part of the second complex number:\n ");
+(gdb) s
+Enter the imaginary part of the second complex number:
+ 41         num2.imaginary = input_complex().imaginary;
+(gdb) s
+input_complex () at problem12.c:12
+12          scanf("%f %f", &num.real, &num.imaginary);
+(gdb) s
+13          return num;
+(gdb) s
+14      }
+(gdb) s
+main () at problem12.c:43
+43          sum = add_complex(num1, num2);
+(gdb) s
+add_complex (a=..., b=...) at problem12.c:18
+18          sum.real = a.real + b.real;
+(gdb) s
+19          sum.imaginary = a.imaginary + b.imaginary;
+(gdb) s
+20          return sum;
+(gdb) s
+21      }
+(gdb) s
+main () at problem12.c:45
+45          output(num1, num2, sum);
+(gdb) s
+output (a=..., b=..., sum=...) at problem12.c:24
+24          printf("Sum of complex numbers:\n");
+(gdb) s
+Sum of complex numbers:
+25          printf("First Complex Number: %f + %fi\n", a.real, a.imaginary);
+(gdb) s
+First Complex Number: 0.000000 + 4155472558031750200000000000000000.000000i
+26          printf("Second Complex Number: %f + %fi\n", b.real, b.imaginary);
+(gdb) s
+Second Complex Number: 0.000000 + 4155472558031750200000000000000000.000000i
+27          printf("Sum: %f + %fi\n", sum.real, sum.imaginary);
+(gdb) s
+Sum: 0.000000 + 8310945116063500500000000000000000.000000i
+28      }
+(gdb) s
+main () at problem12.c:46
+46          sum = add_complex(num1, num2);
+(gdb) s
+add_complex (a=..., b=...) at problem12.c:18
+18          sum.real = a.real + b.real;
+(gdb) s
+19          sum.imaginary = a.imaginary + b.imaginary;
+(gdb) s
+20          return sum;
+(gdb) s
+21      }
+(gdb) s
+main () at problem12.c:48
+48          output(num1, num2, sum);
+(gdb) s
+output (a=..., b=..., sum=...) at problem12.c:24
+24          printf("Sum of complex numbers:\n");
+(gdb) s
+Sum of complex numbers:
+25          printf("First Complex Number: %f + %fi\n", a.real, a.imaginary);
+(gdb) s
+First Complex Number: 0.000000 + 4155472558031750200000000000000000.000000i
+26          printf("Second Complex Number: %f + %fi\n", b.real, b.imaginary);
+(gdb) s 
+Second Complex Number: 0.000000 + 4155472558031750200000000000000000.000000i
+27          printf("Sum: %f + %fi\n", sum.real, sum.imaginary);
+(gdb) s
+Sum: 0.000000 + 8310945116063500500000000000000000.000000i
+28      }
+(gdb) s
+main () at problem12.c:50
+50      return 0;
+(gdb) s
+51      }(gdb) s
+0x00401288 in __register_frame_info ()
+(gdb)
