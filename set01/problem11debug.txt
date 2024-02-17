@@ -1,0 +1,71 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\HP ELITEBOOK\c.activity\set01\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40150e: file problem11.c, line 33.
+(gdb) r
+Starting program: C:\Users\HP ELITEBOOK\c.activity\set01/./a.exe
+[New Thread 4224.0xc74]
+[New Thread 4224.0x7ac]
+
+Breakpoint 1, main () at problem11.c:33
+33          num1 = input();
+(gdb) s
+input () at problem11.c:12
+12          printf("Enter real and imaginary part respectively:\n");
+(gdb) s
+Enter real and imaginary part respectively:
+13          scanf("%f %f", &c.real, &c.imaginary);
+(gdb) s
+s
+14          return c;
+(gdb) s
+15      }
+(gdb) s
+main () at problem11.c:34
+34          num2 = input();
+(gdb) s
+input () at problem11.c:12
+12          printf("Enter real and imaginary part respectively:\n");
+(gdb) s
+Enter real and imaginary part respectively:
+13          scanf("%f %f", &c.real, &c.imaginary);
+(gdb) s
+14          return c;
+(gdb) s
+15      }
+(gdb) s
+main () at problem11.c:36
+36          result = add_sum(num1, num2);
+(gdb) s
+add_sum (a=..., b=...) at problem11.c:20
+20          sum.real = a.real + b.real;
+(gdb) s
+21          sum.imaginary = a.imaginary + b.imaginary;
+(gdb) s
+22          return sum;
+(gdb) s
+23      }
+(gdb) s
+main () at problem11.c:38
+38          output(num1, num2, result);
+(gdb) s
+output (a=..., b=..., sum=...) at problem11.c:27
+27          printf("The sum of %.1f + %.1fi and %.1f + %.1fi is %.1f + %.1fi\n", a.real, a.imaginary, b.real, b.imaginary, sum.real, sum.imaginary);
+(gdb) s
+The sum of 4147870677735508500000000000000000.0 + 4147862631125253200000000000000000.0i and 4147870677735508500000000000000000.0 + 4147862631125253200000000000000000.0i is 8295741355471017100000000000000000.0 + 8295725262250506400000000000000000.0i
+28      }
+(gdb) s
+main () at problem11.c:40
+40          return 0;
+(gdb) s
+41      }(gdb) s
+0x00401288 in __register_frame_info ()
+(gdb)
