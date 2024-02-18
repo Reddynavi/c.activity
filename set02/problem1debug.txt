@@ -1,0 +1,59 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\HP ELITEBOOK\c.activity\set02\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401505: file problem01.c, line 20.
+(gdb) r
+Starting program: C:\Users\HP ELITEBOOK\c.activity\set02/./a.exe 
+[New Thread 9728.0x2224]
+[New Thread 9728.0x46d8]
+
+Breakpoint 1, main () at problem01.c:20
+20              input(&base,&height);
+(gdb) s
+input (base=0x61ff1c, height=0x61ff18) at problem01.c:4
+4               printf("ENTER THE BASE OF THE TRIANGLE(in cms)");
+(gdb) s
+ENTER THE BASE OF THE TRIANGLE(in cms)5         scanf("%f",base);
+(gdb) s
+s
+6               printf("ENTER THE HEIGHT OF THE TRIANGLE(in cms)");
+(gdb) s
+ENTER THE HEIGHT OF THE TRIANGLE(in cms)7               scanf("%f",height);
+(gdb) s
+8           }
+(gdb) s
+main () at problem01.c:21
+21              find_area(base,height,&area);
+(gdb) s
+find_area (base=4.87876073e-039, height=0, area=0x61ff14) at problem01.c:11
+11              *area=0.5*base*height;
+(gdb) s
+12          }
+(gdb) s
+main () at problem01.c:22
+22              output(base,height,area);
+(gdb) s
+output (base=4.87876073e-039, height=0, area=0) at problem01.c:15
+15              printf("THE AREA OF THE TRIANGLE WHOSE BASE IS %f AND WHOSE HEIGHT IS %f IS %f ",base,height,area);
+(gdb) s
+THE AREA OF THE TRIANGLE WHOSE BASE IS 0.000000 AND WHOSE HEIGHT IS 0.000000 IS 0.000000 16  
+   }
+(gdb) s
+main () at problem01.c:23
+23              return 0;
+(gdb) s
+24          }(gdb) s
+0x00401288 in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128a in __register_frame_info ()
+(gdb)
