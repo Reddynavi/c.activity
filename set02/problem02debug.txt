@@ -1,0 +1,79 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\HP ELITEBOOK\c.activity\set02\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401501: file problem02.c, line 24.
+(gdb) r
+Starting program: C:\Users\HP ELITEBOOK\c.activity\set02/./a.exe 
+[New Thread 7720.0x1db0]
+[New Thread 7720.0x3d7c]
+
+Breakpoint 1, main () at problem02.c:24
+24        int side1 = input_side();
+(gdb) s
+input_side () at problem02.c:5
+5           printf("Enter the side length: ");
+(gdb) s
+Enter the side length: 6            scanf("%d", &side);
+(gdb) s
+s
+7           return side;
+(gdb) s
+8       }
+(gdb) s
+main () at problem02.c:25
+25        int side2 = input_side();
+(gdb) s
+input_side () at problem02.c:5
+5           printf("Enter the side length: ");
+(gdb) s
+Enter the side length: 6            scanf("%d", &side);
+(gdb) s
+7           return side;
+(gdb) s
+8       }
+(gdb) s
+main () at problem02.c:26
+26        int side3 = input_side();
+(gdb) s
+input_side () at problem02.c:5
+5           printf("Enter the side length: ");
+(gdb) s
+Enter the side length: 6            scanf("%d", &side);
+(gdb) s
+7           return side;
+(gdb) s
+8       }
+(gdb) s
+main () at problem02.c:27
+27        int isscalene = check_scalene(side1, side2, side3);
+(gdb) s
+check_scalene (a=6422476, b=6422476, c=6422476) at problem02.c:11
+11          if (a != b && b != c && a != c) {
+(gdb) s
+14              return 0;
+(gdb) s
+16      }
+(gdb) s
+main () at problem02.c:28
+28        output(side1, side2, side3, isscalene);
+(gdb) s
+output (a=6422476, b=6422476, c=6422476, isscalene=0) at problem02.c:19
+19          printf("The triangle with sides %d, %d and %d is %s scalene\n", a, b, c, (isscalene ? "": "not"));
+(gdb) s
+The triangle with sides 6422476, 6422476 and 6422476 is not scalene
+20      }
+(gdb) s
+main () at problem02.c:29
+29        return 0;
+(gdb) s
+30      }
+(gdb) s
+0x00401288 in __register_frame_info ()
