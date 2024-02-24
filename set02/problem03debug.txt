@@ -1,0 +1,85 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\HP ELITEBOOK\c.activity\set02\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x401516: file problem03.C, line 29.
+(gdb) r
+Starting program: C:\Users\HP ELITEBOOK\c.activity\set02/./a.exe
+[New Thread 2296.0x2454]
+[New Thread 2296.0x3f0c]
+
+Breakpoint 1, main () at problem03.C:29
+29          int number = input_number();
+(gdb) s
+input_number () at problem03.C:5
+5           printf("Enter a number: ");
+(gdb) s
+Enter a number: 6           scanf("%d", &number);
+(gdb) s
+s
+7           return number;
+(gdb) s
+8       }
+(gdb) s
+main () at problem03.C:30
+30          int result = is_composite(number);
+(gdb) s
+is_composite (n=6422476) at problem03.C:11
+11          if (n <= 1) {
+(gdb) s
+15          int factors = 0;
+(gdb) s
+16          for (int i = 1; i <= n; i++) {
+(gdb) s
+17              if (n % i == 0) {
+(gdb) s
+18              factors++;
+(gdb) s
+16          for (int i = 1; i <= n; i++) {
+(gdb) s
+17              if (n % i == 0) {
+(gdb) s
+18              factors++;
+(gdb) s
+16          for (int i = 1; i <= n; i++) {
+(gdb) s
+17              if (n % i == 0) {
+(gdb) s
+16          for (int i = 1; i <= n; i++) {
+(gdb) s
+17              if (n % i == 0) {
+(gdb) s
+18              factors++;
+(gdb) s
+16          for (int i = 1; i <= n; i++) {
+(gdb) s
+17              if (n % i == 0) {
+(gdb) s
+16          for (int i = 1; i <= n; i++) {
+(gdb) s
+17              if (n % i == 0) {
+(gdb) s
+16          for (int i = 1; i <= n; i++) {
+(gdb) s
+17              if (n % i == 0) {
+(gdb) s
+16          for (int i = 1; i <= n; i++) {
+(gdb)
+17              if (n % i == 0) {
+(gdb)
+16          for (int i = 1; i <= n; i++) {
+(gdb)
+17              if (n % i == 0) {
+(gdb)
+16          for (int i = 1; i <= n; i++) {
+(gdb)
+17              if (n % i == 0) {
+(gdb) q
+A debugging session is active.
