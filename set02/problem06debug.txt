@@ -1,0 +1,75 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\HP ELITEBOOK\c.activity\set02\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x40151f: file problem06.c, line 28.
+(gdb) r     
+Starting program: C:\Users\HP ELITEBOOK\c.activity\set02/./a.exe 
+[New Thread 19356.0x2750]
+[New Thread 19356.0x1b94]
+
+Breakpoint 1, main () at problem06.c:28
+28          input_string(original_string);
+(gdb) s
+input_string (a=0x61febc "ü_a") at problem06.c:5
+5           printf("Enter a string: ");
+(gdb) s
+Enter a string: 6           scanf("%s", a);
+(gdb) s
+s
+7        }
+(gdb) s
+main () at problem06.c:29
+29          str_reverse(original_string, reversed_string);
+(gdb) s
+str_reverse (str=0x61febc "s", rev_str=0x61fe58 ""_a") at problem06.c:10
+10          int length = strlen(str);
+(gdb) s
+11          int i, j = 0;
+(gdb) s
+12          for (i = length - 1; i >= 0; i--)
+(gdb) s
+14              rev_str[j] = str[i];
+(gdb) s
+15              j++;
+(gdb) s
+12          for (i = length - 1; i >= 0; i--)
+(gdb) s
+17          rev_str[j] = '\0';
+(gdb) s
+18      }
+(gdb) s
+main () at problem06.c:30
+30          output(original_string, reversed_string);
+(gdb) s
+output (a=0x61febc "s", reverse_a=0x61fe58 "s") at problem06.c:21
+21          printf("Original String: %s\n", a);
+(gdb) s
+Original String: s
+22          printf("Reversed String: %s\n", reverse_a);
+(gdb) s
+Reversed String: s
+23      }
+(gdb) s
+main () at problem06.c:31
+31          return 0;
+(gdb) s
+32      }(gdb) s
+0x00401288 in __register_frame_info ()
+(gdb) s
+Single stepping until exit from function __register_frame_info,
+which has no line number information.
+0x0040128a in __register_frame_info ()
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 19356] will be killed.
+
+Quit anyway? (y or n) y
