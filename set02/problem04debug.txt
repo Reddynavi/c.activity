@@ -1,0 +1,45 @@
+GNU gdb (GDB) 7.6.1
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "mingw32".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from C:\Users\HP ELITEBOOK\c.activity\set02\a.exe...done.
+(gdb) b main
+Breakpoint 1 at 0x4015aa: file problem04.c, line 48.
+(gdb) r
+Starting program: C:\Users\HP ELITEBOOK\c.activity\set02/./a.exe
+[New Thread 2672.0x17fc]
+[New Thread 2672.0x2a08]
+
+Breakpoint 1, 0x004015aa in main () at problem04.c:48
+48       {
+(gdb) s
+49          int size = input_array_size();
+(gdb) s
+input_array_size () at problem04.c:5
+5           printf("Enter the size of the array: ");
+(gdb) s
+Enter the size of the array: 6      scanf("%d", &size);
+(gdb) s
+s
+7           return size;
+(gdb) s
+8       }
+(gdb) s
+main () at problem04.c:50
+50          int array[size];
+(gdb) s
+__chkstk_ms () at ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S:163
+163     ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S: No such file or directory.        
+(gdb) s
+165     in ../../../src/gcc-6.3.0/libgcc/config/i386/cygwin.S
+(gdb) q
+A debugging session is active.
+
+        Inferior 1 [process 2672] will be killed.
+
+Quit anyway? (y or n) y
